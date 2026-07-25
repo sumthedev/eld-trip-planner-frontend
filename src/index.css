@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-asphalt: #14181c;
+  --color-panel: #1d2227;
+  --color-panel-line: #2c3339;
+  --color-paper: #f0ede4;
+  --color-steel: #8a99a3;
+  --color-amber: #f2a93b;
+  --color-amber-dim: #8a6a2c;
+  --color-signal: #4e9f5b;
+}
+
+body {
+  background-color: var(--color-asphalt);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+/* subtle ELD log-sheet ruling in the background */
+.log-grid {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 27px,
+      rgba(240, 237, 228, 0.045) 27px,
+      rgba(240, 237, 228, 0.045) 28px
+    );
+}
+
+@keyframes route-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.route-progress {
+  transform-origin: left;
+  animation: route-fill 900ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
