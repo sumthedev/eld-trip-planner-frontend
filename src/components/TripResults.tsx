@@ -1,6 +1,7 @@
 import { DailyLogChart, type DailyLog } from "@/components/DailyLogChart"
 import { Card } from "@/components/ui/card"
 import { AlertTriangle, Route, Clock, Calendar } from "lucide-react"
+import { TripMap } from "./TripMap"
 
 interface Stop {
   label: string
@@ -32,6 +33,7 @@ export function TripResults({
 }: TripResultsProps) {
   return (
     <div className="w-full max-w-4xl flex flex-col gap-6">
+      <TripMap route={route} />
       <Card className="p-6 flex flex-wrap gap-6">
         <div className="flex items-center gap-2">
           <Route size={16} className="text-amber" />
