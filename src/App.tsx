@@ -3,7 +3,9 @@ import { TripForm, type TripFormData } from "@/components/TripForm"
 import { TripResults } from "@/components/TripResults"
 import type { DailyLog } from "@/components/DailyLogChart"
 
-const API_BASE = "http://localhost:8000"
+// const API_BASE = "http://localhost:8000"
+
+const API_BASE = "https://eld-trip-planner-backend-lswq.onrender.com"
 
 interface TripPlanResponse {
   route: {
